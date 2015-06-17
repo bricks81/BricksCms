@@ -13,9 +13,12 @@
     	"php": ">=5.3.3",    
     	"bricks81/bricksConfig": "dev-master",
     	"bricks81/bricksClassLoader": "dev-master",
-    	"bricks81/bricksAsset": "dev-master"    	
-    	"bricks81/bricksFile": "dev-master"
+    	"bricks81/bricksAsset": "dev-master",
+    	"bricks81/bricksFile": "dev-master",
     	"bricks81/bricksPlugin": "dev-master"
+    },
+    "autoload": {
+    	"classmap": ["Module.php"]
     },
     "repositories": [
     	{
@@ -38,8 +41,5 @@
     		"type": "vcs",
     		"url": "https://github.com/bricks81/BricksPlugin.git"
     	}
-    ],
-    "autoload": {
-    	"classmap": ["Module.php"]
-    }
+    ]    
 }
