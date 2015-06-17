@@ -35,7 +35,7 @@
 				'index' => array(
 					'type' => 'literal',
 					'options' => array(						
-						'route'    => '/',
+						'route'    => '/bricks',
 						'defaults' => array(
 							'controller' => 'BricksCms\Controller\IndexController',
 							'action'     => 'index',
