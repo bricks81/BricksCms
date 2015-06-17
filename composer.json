@@ -1,0 +1,45 @@
+{
+    "name": "bricks81/bricks-cms",
+    "description": "CMS Implementation based on Bricks CMS Framework",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Sven Ullmann",
+            "email": "kontakt@28-n-half.de"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+    	"php": ">=5.3.3",    
+    	"bricks81/bricksConfig": "dev-master",
+    	"bricks81/bricksClassLoader": "dev-master",
+    	"bricks81/bricksAsset": "dev-master"    	
+    	"bricks81/bricksFile": "dev-master"
+    	"bricks81/bricksPlugin": "dev-master"
+    },
+    "repositories": [
+    	{
+    		"type": "vcs",
+    		"url": "https://github.com/bricks81/BricksAsset.git"
+    	}
+    	{
+    		"type": "vcs",
+    		"url": "https://github.com/bricks81/BricksConfig.git"
+    	}
+    	{
+    		"type": "vcs",
+    		"url": "https://github.com/bricks81/BricksClassLoader.git"
+    	}
+    	{
+    		"type": "vcs",
+    		"url": "https://github.com/bricks81/BricksFile.git"
+    	}
+    	{
+    		"type": "vcs",
+    		"url": "https://github.com/bricks81/BricksPlugin.git"
+    	}
+    ],
+    "autoload": {
+    	"classmap": ["autoload_classmap.php"]
+    }
+}

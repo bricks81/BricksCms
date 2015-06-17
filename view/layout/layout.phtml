@@ -1,0 +1,19 @@
+<?php echo $this->doctype(); ?>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <base href="<?php echo $this->BasePath('/'); ?>" />
+        <?php 
+        	echo $this->headTitle('BrIcKs')->setSeparator(' - ')->setAutoEscape(false);
+        	echo $this->headMeta()
+            	->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            	->appendHttpEquiv('X-UA-Compatible', 'IE=edge');
+			echo $this->headScript();			
+        ?>
+    </head>
+    <body>
+    
+    	<?php echo $this->layout()->content; ?>
+	    
+    </body>    
+</html>
