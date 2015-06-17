@@ -10,12 +10,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-    	"php": ">=5.3.3",    
-    	"bricks81/bricksConfig": "dev-master",
-    	"bricks81/bricksClassLoader": "dev-master",
-    	"bricks81/bricksAsset": "dev-master",
-    	"bricks81/bricksFile": "dev-master",
-    	"bricks81/bricksPlugin": "dev-master"
+    	"php": ">=5.3.3"
     },
     "autoload": {
     	"classmap": ["Module.php"]
