@@ -40,6 +40,6 @@
     	}
     ],
     "autoload": {
-    	"classmap": ["autoload_classmap.php"]
+    	"classmap": ["Module.php"]
     }
 }
