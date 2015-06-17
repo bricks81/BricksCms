@@ -8,33 +8,16 @@
             "email": "kontakt@28-n-half.de"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
-    	"php": ">=5.3.3"
+    	"php": ">=5.3.3",
+    	"bricks81/bricks-asset": "dev-master",
+    	"bricks81/bricks-config": "dev-master",
+    	"bricks81/bricks-classloader": "dev-master",
+    	"bricks81/bricks-file": "dev-master",
+    	"bricks81/bricks-plugin": "dev-master"
     },
     "autoload": {
     	"classmap": ["Module.php"]
-    },
-    "repositories": [
-    	{
-    		"type": "vcs",
-    		"url": "https://github.com/bricks81/BricksAsset.git"
-    	},
-    	{
-    		"type": "vcs",
-    		"url": "https://github.com/bricks81/BricksConfig.git"
-    	},
-    	{
-    		"type": "vcs",
-    		"url": "https://github.com/bricks81/BricksClassLoader.git"
-    	},
-    	{
-    		"type": "vcs",
-    		"url": "https://github.com/bricks81/BricksFile.git"
-    	},
-    	{
-    		"type": "vcs",
-    		"url": "https://github.com/bricks81/BricksPlugin.git"
-    	}
-    ]    
+    }    
 }
