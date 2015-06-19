@@ -3,7 +3,7 @@
 	$(document).ready(function(){
 		
 		var fitrow = function(){
-			$('.row').each(function(){
+			$('.row-fit-height').each(function(){
 				var row = $(this);
 				var height = 0;
 				$(this).children().each(function(){
