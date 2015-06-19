@@ -29,6 +29,18 @@ class Module {
 	public function onBootstrap(MvcEvent $e){
 		$t = $e->getApplication()->getServiceManager()->get('MvcTranslator');
 		$e->getApplication()->getServiceManager()->get('Router')->setTranslator($t);
+		
+		$e->getApplication()->getEventManager()->attach(MvcEvent::EVENT_RENDER,function(MvcEvent $e){
+			$e->getApplication()->getServiceManager()->get('ViewHelperManager')->get('HeadLink')
+				->appendStylesheet('bootstrap/css/bootstrap.min.css')
+				->appendStylesheet('font-awesome/css/font-awesome.min.css')
+				->appendStylesheet('BricksCms/css/default.css');
+			$e->getApplication()->getServiceManager()->get('ViewHelperManager')->get('HeadScript')
+				->appendFile('jquery/jquery.min.js')
+				->appendFile('jqueryui/jquery-ui.min.js')
+				->appendFile('modernizr/modernizr.js')
+				->appendFile('bootstrap/js/bootstrap.min.js');
+		});
 	}
 	
 	/**

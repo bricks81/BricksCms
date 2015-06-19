@@ -1,0 +1,9 @@
+body {
+	margin: 0;
+	font: 11pt/1.5 arial,helvetica,sans-serif;
+	background:#c00;	
+}
+
+a:link, a:hover {
+	color:#c90;
+}
