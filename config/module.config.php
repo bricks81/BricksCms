@@ -33,9 +33,9 @@
 			'router_class' => 'Zend\Mvc\Router\Http\TranslatorAwareTreeRouteStack',
 			'routes' => array(
 				'index' => array(
-					'type' => 'literal',
+					'type' => 'segment',
 					'options' => array(						
-						'route'    => '/bricks',
+						'route'    => '/{Bricks}',
 						'defaults' => array(
 							'controller' => 'BricksCms\Controller\IndexController',
 							'action'     => 'index',

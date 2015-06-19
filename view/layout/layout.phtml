@@ -1,7 +1,8 @@
 <?php echo $this->doctype(); ?>
 <html lang="de">
     <head>
-        <meta charset="utf-8">        
+        <meta charset="utf-8">     
+        <base href="<?php echo $this->basePath('/'); ?>" />   
         <?php 
         	echo $this->headTitle('BrIcKs')->setSeparator(' - ')->setAutoEscape(false);
         	echo $this->headMeta()
