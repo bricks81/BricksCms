@@ -76,3 +76,49 @@ header.header {
 	width:100%;
 	border-bottom:6px solid #89A111;
 }
+
+form {
+	line-height:1.5;
+}
+
+form fieldset {
+	border:1px solid #ccc;
+	margin:10px;
+	padding:10px;    
+}
+
+form legend {	
+	width:auto;
+	padding:0 10px;
+	margin:0 10px;
+}
+
+form label {	
+	margin:0 10px;
+	width:150px;		
+}
+
+form input[type="checkbox"] {
+	position:relative;
+	top:2px;
+	margin:0 10px;			
+}
+
+form input[type="radio"] {
+	margin:0 10px;	
+}
+
+form fieldset.submit {
+	text-align:right;
+	border:none;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	border-right:1px solid #ccc;
+	padding:5px;
+	background-color:transparent;
+	background:linear-gradient(to right,rgba(255,255,255,0),#f0f0f0);		
+}
+
+footer.footer {
+	height:40px;
+}
