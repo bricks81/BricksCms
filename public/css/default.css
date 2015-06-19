@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	font: 11pt/1.5 arial,helvetica,sans-serif;
-	background:#c00;	
+	background:linear-gradient(#FFF,#F5F5F5);	
 }
 
 a:link, a:hover {
