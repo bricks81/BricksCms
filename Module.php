@@ -8,7 +8,38 @@
  */
 namespace BricksCms;
 
+use Zend\ModuleManager\ModuleManager;
+use Zend\Mvc\MvcEvent;
+
 class Module {
+	
+	/**
+	 * @param ModuleManager $moduleManager
+	 */
+	public function init(ModuleManager $moduleManager){
+		$config = $this->getConfig();
+		foreach($config['BricksConfig']['BricksCms']['BricksCms']['dependendModules'] AS $moduleName){		
+			$moduleManager->loadModule($moduleName);
+		}		
+	}
+	
+	/**
+	 * @param MvcEvent $e
+	 */
+	public function onBootstrap(MvcEvent $e){
+		$t = $e->getApplication()->getServiceManager()->get('MvcTranslator');
+		$e->getApplication()->getServiceManager()->get('Router')->setTranslator($t);
+	}
+	
+	/**
+	 * @param MvcEvent $e
+	 */
+	public function handleError(MvcEvent $e){
+		$param = $e->getParam('exception');
+		if($param instanceof \Exception){
+			throw $e->getParam('exception');
+		}
+	}
 	
 	/**
 	 * @return array

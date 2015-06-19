@@ -43,6 +43,19 @@
 					),					
 				),				
 			),
+		),
+		'BricksConfig' => array(
+			'BricksCms' => array(
+				'BricksCms' => array(
+					'dependendModules' => array(
+						'BricksFile',
+						'BricksConfig',
+						'BricksClassLoader',
+						'BricksPlugin',
+						'BricksAsset',
+					),
+				),
+			),
 		),		
 	);
 ?>
