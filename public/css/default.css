@@ -1,7 +1,12 @@
+html {
+	height:100%;
+}
+
 body {
 	margin: 0;
 	font: 11pt/1.5 arial,helvetica,sans-serif;
-	background:linear-gradient(#FFF,#F5F5F5);	
+	background:linear-gradient(#FFF,#F5F5F5);
+	height:100%;	
 }
 
 a:link, a:hover {
