@@ -20,7 +20,7 @@
     	"components/jquery": "2.*@stable",
     	"components/jqueryui": "1.*@stable", 
     	"components/modernizr": "2.*@stable",
-    	"components/font-awesome": "4.*@stable",
+    	"components/font-awesome": "4.*@stable"
     },
     "autoload": {
     	"classmap": ["Module.php"]
