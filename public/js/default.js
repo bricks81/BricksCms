@@ -65,6 +65,12 @@
 			$(this).children('ul').fadeOut(150);
 		});
 		
+		$('.popover-hover').each(function(){
+			var title = $(this).attr('title');
+			var content = $(this).attr('data-content');
+			$(this).popover({title:title,content:content,trigger:"hover",color:'#333'});
+		});
+		
 	});
 	
 }(jQuery));

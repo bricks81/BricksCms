@@ -236,3 +236,15 @@ nav.nav > ul > li > ul > li ul {
 	margin-left:85%;
 	margin-top:-25px;
 }
+
+nav.nav ul.user {
+	float:right;	
+}
+
+.popover-title {
+	color:#333;
+}
+
+.popover-content {
+	color:#333;
+}

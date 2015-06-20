@@ -16,7 +16,7 @@
     
     	<header class="header">
     		<nav class="nav container">
-    			<ul>
+    			<ul class="main">
     				<li class="active"><a href="<?php echo $this->Url('bricks.index.index'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			        <li>
 			        	<a href="<?php echo $this->Url('bricks.asset.publish'); ?>"><i class="fa fa-image"></i> Asset Service</a>
@@ -38,7 +38,10 @@
 			        	</ul>
 			        </li>			       
     			</ul>
-    		</nav>    		
+    			<ul class="user">
+    				<li><a href="#"><i class="fa fa-sign-in popover-hover" title="Login"></i></a></li>
+    			</ul>
+    		</nav>
     	</header>
     
     	<content class="content"><?php echo $this->layout()->content; ?></content>
