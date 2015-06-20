@@ -12,18 +12,22 @@
 			echo $this->headLink();			
         ?>
     </head>
-    <body>
+    <body>    	
     
     	<header class="header">
     		<nav class="nav container">
     			<ul>
-    				<li class="active"><a href="<?php echo $this->Url('bricks.index.index'); ?>"><i class="fa fa-facebook"></i> Home</a></li>
+    				<li class="active"><a href="<?php echo $this->Url('bricks.index.index'); ?>"><i class="fa fa-home"></i> Home</a></li>
 			        <li>
-			        	<a href="<?php echo $this->Url('bricks.asset.publish'); ?>"><i class="fa fa-tag"></i> Asset Service</a>
+			        	<a href="<?php echo $this->Url('bricks.asset.publish'); ?>"><i class="fa fa-image"></i> Asset Service</a>
 			        	<ul>
-			        		<li><a href="#"><i class="fa fa-cog"></i> Test</a></li>
-			        		<li><a href="#"><i class="fa fa-cogs"></i> Längerer String</a></li>
-			        		<li><a href="#"><i class="fa fa-tag"></i>Längerer String Längerer String</a></li>
+			        		<li><a href="<?php echo $this->Url('bricks.asset.publish'); ?>"><i class="fa fa-refresh"></i> Assets verarbeiten</a></li>
+			        		<li>
+			        			<a href="#" onClick="showSubmenu();"><i class="fa fa-cog"></i> Einstellungen <i class="fa fa-caret-right right-important"></i></a>
+			        			<ul>
+			        				<li><a href="<?php echo $this->Url('bricks.asset.publish'); ?>"><i class="fa fa-refresh"></i> Assets verarbeiten</a></li>
+			        			</ul>
+			        		</li>			        		
 			        	</ul>
 			        </li>			       
     			</ul>

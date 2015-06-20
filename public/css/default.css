@@ -26,8 +26,23 @@ h1, h2, h3, h4, h5, h6 {
 	padding:0;
 }
 
-.left-pad-10 {
+.left {
 	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.left-important {
+	float:left !important;
+}
+
+.right-important {
+	float:right !important;
+}
+
+.left-pad-10 {
 	padding:0 10px 10px 0; 
 }
 
@@ -179,13 +194,14 @@ nav.nav a:hover {
 }
 
 nav.nav > ul > li > ul {
-	display:none;
+	display:none;	
 	position:absolute;	
 	list-style-type:none;
 	margin:6px 0 0 0;
 	padding:5px;
 	background:linear-gradient(#555,#333);
-	box-shadow:0 0 2px #333;	
+	box-shadow:0 0 2px #333;
+	min-width:200px;	
 }
 
 nav.nav > ul > li > ul > li > a {
@@ -212,5 +228,37 @@ nav.nav i.fa {
 	height:16px;
 	float:left;
 	margin-right:5px;
+	margin-top:1px;
 	text-align:center;
+}
+
+nav.nav > ul > li > ul > li > ul {
+	display:none;
+	position:absolute;
+	list-style-type:none;
+	margin:0;
+	padding:5px;
+	background:#FFF;
+	margin-left:85%;
+	margin-top:-25px;
+	background:linear-gradient(#555,#333);
+	box-shadow:0 0 2px #333;
+	min-width:200px;	
+}
+
+nav.nav > ul > li > ul > li > ul > li > a {
+	display:block;
+	padding:5px;	
+	color:#EEFFBB;
+	text-decoration:none;
+	border-top:1px solid #555;
+	border-left:1px solid #555;
+	border-right:1px solid #444;
+	border-bottom:1px solid #444;
+	border-radius:2px;
+}
+
+nav.nav > ul > li > ul > li > ul > li > a:hover {
+	color:#FFF;		
+	background:rgba(255,255,255,0.05);
 }
