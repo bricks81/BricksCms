@@ -51,6 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius:2px;
 	box-shadow:0 0 2px #AAA;	
 	height:100%;
+	margin-top:20px;	
 }
 
 .row-fit-height {
