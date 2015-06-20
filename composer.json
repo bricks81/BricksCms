@@ -13,7 +13,7 @@
     	"php": ">=5.3.3",
     	"bricks81/bricks-asset": "dev-master",
     	"bricks81/bricks-config": "dev-master",
-    	"bricks81/bricks-classloader": "dev-master",
+    	"bricks81/bricks-class-loader": "dev-master",
     	"bricks81/bricks-file": "dev-master",
     	"bricks81/bricks-plugin": "dev-master",
     	"components/bootstrap": "3.*@stable", 
