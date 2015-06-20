@@ -12,10 +12,11 @@ body {
 a:link, a:hover {
 	color:#597100;
 	text-decoration:underline;
+	outline:none;
 }
 
 a:hover {
-	color:#799120;
+	color:#799120;	
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -168,12 +169,11 @@ nav.nav > ul > li > a {
 	width:100%;
 	height:100%;
 	color:#EEFFBB;
-	text-decoration:none;
-	outline:none;
+	text-decoration:none;	
 }
 
 nav.nav a:hover {
-	color:#FFFFEE;		
+	color:#FFF;		
 }
 
 nav.nav > ul > li > ul {
@@ -191,9 +191,27 @@ nav.nav > ul > li > ul > li > a {
 	padding:5px;	
 	color:#EEFFBB;
 	text-decoration:none;
-	border:1px solid #444;
+	border-top:1px solid #555;
+	border-left:1px solid #555;
+	border-right:1px solid #444;
+	border-bottom:1px solid #444;
 }
 
 nav.nav > ul > li > ul > li > a:hover {
-	color:#FFFFEE;
+	color:#FFF;
+	border-top:1px solid #666;
+	border-left:1px solid #666;
+	border-right:1px solid #555;
+	border-bottom:1px solid #555;
+	border-radius:2px;	
+}
+
+nav.nav i.fa {
+	font-size:1.1em;
+	display:block;
+	width:16px;
+	height:16px;
+	float:left;
+	margin-right:5px;
+	text-align:center;
 }
