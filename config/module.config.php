@@ -32,7 +32,7 @@
 		'router' => array(
 			'router_class' => 'Zend\Mvc\Router\Http\TranslatorAwareTreeRouteStack',
 			'routes' => array(
-				'index' => array(
+				'bricks.index.index' => array(
 					'type' => 'segment',
 					'options' => array(						
 						'route'    => '/{Bricks}',

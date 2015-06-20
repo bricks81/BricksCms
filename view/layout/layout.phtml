@@ -14,7 +14,14 @@
     </head>
     <body>
     
-    	<header class="header"></header>
+    	<header class="header">
+    		<nav class="nav container">
+    			<ul>
+    				<li class="active"><a href="<?php echo $this->Url('bricks.index.index'); ?>">Home</a></li>
+			        <li><a href="<?php echo $this->Url('bricks.asset.publish'); ?>">Asset Service</a></li>
+    			</ul>
+    		</nav>    		
+    	</header>
     
     	<content class="content"><?php echo $this->layout()->content; ?></content>
 	    
