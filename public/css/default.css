@@ -11,12 +11,20 @@ body {
 
 a:link, a:hover {
 	color:#597100;
-	text-decoration:underline;
+	text-decoration:none;
 	outline:none;
 }
 
 a:hover {
 	color:#799120;	
+}
+
+a[href^="http"]:after {
+	content:'\f08e';
+	font-family:FontAwesome;	
+	color:#333;
+	margin-left:5px;
+	font-size:0.8em;		
 }
 
 h1, h2, h3, h4, h5, h6 {
