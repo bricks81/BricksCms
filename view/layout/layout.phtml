@@ -18,7 +18,14 @@
     		<nav class="nav container">
     			<ul>
     				<li class="active"><a href="<?php echo $this->Url('bricks.index.index'); ?>">Home</a></li>
-			        <li><a href="<?php echo $this->Url('bricks.asset.publish'); ?>">Asset Service</a></li>
+			        <li>
+			        	<a href="<?php echo $this->Url('bricks.asset.publish'); ?>">Asset Service</a>
+			        	<ul>
+			        		<li><a href="#">Test</a></li>
+			        		<li><a href="#">Längerer String</a></li>
+			        		<li><a href="#">Längerer String Längerer String</a></li>
+			        	</ul>
+			        </li>
     			</ul>
     		</nav>    		
     	</header>

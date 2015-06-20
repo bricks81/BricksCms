@@ -59,6 +59,12 @@
 		fitrow();		
 		$(window).resize(fitrow);
 		
+		$('nav.nav > ul > li').hover(function(){
+			$(this).find('ul').fadeIn(150);
+		},function(){
+			$(this).find('ul').fadeOut(150);
+		});
+		
 	});
 	
 }(jQuery));
