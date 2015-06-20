@@ -59,21 +59,11 @@
 		fitrow();		
 		$(window).resize(fitrow);
 		
-		$('nav.nav > ul > li').hover(function(){
+		$('nav.nav > ul li').hover(function(){
 			$(this).children('ul').fadeIn(150);
 		},function(){
 			$(this).children('ul').fadeOut(150);
 		});
-		
-		$('nav.nav > ul > li > ul > li').hover(function(){
-			$(this).children('ul').fadeIn(150);
-		},function(){
-			$(this).children('ul').fadeOut(150);
-		})
-		
-		var showSubMenu = function(){			
-			$(this).parent().find('ul').slideDown();
-		}
 		
 	});
 	
