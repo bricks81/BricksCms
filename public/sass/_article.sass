@@ -1,0 +1,43 @@
+aside content,section content {
+	p,ul {
+		display:inline-block;
+	}
+}
+
+aside {
+	float:right;
+	width:20%;
+
+	article {
+		@extend .box;
+		width:100%;
+		min-width:250px;
+	
+		content {
+			padding:10px;
+		}
+	}
+}
+
+section[role="article"] {
+	float:left;
+	display:flex;
+	flex-wrap:wrap;
+	width:80%;	
+	margin:0 0;
+
+	article {
+		@extend .box;
+		flex:auto;	
+	
+		content {
+			padding:10px;
+		}
+	
+		&:nth-of-type(1){
+			min-width:500px;
+			max-width:600px;		
+		}
+		
+	}
+}

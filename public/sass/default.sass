@@ -1,0 +1,65 @@
+@import "_reset.sass";
+@import "_navigation.sass";
+@import "_article.sass";
+
+html {
+	height:100%;
+}
+
+body {
+	margin: 0;
+	font: #{9pt}/#{1.5} arial,helvetica,sans-serif;
+	background:url('../img/bg.png');
+	height:100%;
+}
+
+a:link, a:visited {
+	color:#597100;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover {
+	color:#799120;	
+}
+
+a[href^="http"]:after {
+	content:'\f08e';
+	font-family:FontAwesome;	
+	color:#333;
+	margin-left:5px;
+	font-size:0.8em;		
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size:1em;
+	font-weight:bold;
+}
+
+.box {
+	background:linear-gradient(#FFF,#F5F5F5);
+	border-radius:2px;
+	box-shadow:0 0 2px #AAA;
+	margin-top:20px;
+	margin:5px;	
+}
+
+.box h1 {	
+	font-size:1em;
+	font-weight:bold;
+	padding:3px 0 3px 10px;
+	display:block;	
+	background:linear-gradient(#89A111,#597100);
+	color:#F0F0F0;	
+	border-top-left-radius:2px;
+	border-top-right-radius:2px;
+}
+
+footer.footer {
+	height:40px;
+}
+
+content[role="main"] {
+	display:block;
+	margin:20px 50px 0 50px;			
+}
