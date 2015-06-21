@@ -4,10 +4,14 @@ aside content,section content {
 	}
 }
 
-aside {
+section[role="main"] {
+	display:flex;	
+}
+
+aside {	
 	float:right;
 	width:20%;
-
+	
 	article {
 		@extend .box;
 		width:100%;

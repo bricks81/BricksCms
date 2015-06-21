@@ -1,6 +1,7 @@
 @import "_reset.sass";
 @import "_navigation.sass";
 @import "_article.sass";
+@import "_form.sass";
 
 body {	
 	font: #{9pt}/#{1.5} arial,helvetica,sans-serif;
@@ -35,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 	background:linear-gradient(#FFF,#F5F5F5);
 	border-radius:2px;
 	box-shadow:0 0 2px #AAA;
-	margin:5px;	
+	margin:5px;
 }
 
 .box h1 {	
@@ -74,4 +75,14 @@ content[role="main"] img {
 
 section[role="article"] article:nth-of-type(1) {
 	width:100%;
+}
+
+pre {
+	font-family:monospace;
+	overflow-x:scroll;
+	overflow-y:hidden;
+	border:1px solid #CCC;	
+	display:block;
+	padding:5px;	
+	background:#fffcf9;
 }
