@@ -59,6 +59,8 @@
 			'BricksAsset' => array(
 				'BricksCms' => array(
 					'autoPublish' => true,					
+					'autoCompile' => true,
+					'scssSupport' => true,
 					'moduleAssetsPath' => dirname(__DIR__).'/public',
 				),
 				'jquery' => array(
