@@ -18,8 +18,8 @@ class Module {
 	 */
 	public function init(ModuleManager $moduleManager){
 		$config = $this->getConfig();
-		foreach($config['BricksConfig']['BricksCms']['BricksCms']['dependendModules'] AS $moduleName){		
-			$moduleManager->loadModule($moduleName);
+		foreach($config['BricksConfig']['BricksCms']['BricksCms']['dependendModules'] AS $moduleName){					
+			$moduleManager->loadModule($moduleName);			
 		}		
 	}
 	

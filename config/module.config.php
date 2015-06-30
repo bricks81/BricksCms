@@ -55,7 +55,7 @@
 						'BricksAsset',
 					),
 				),
-			),
+			),			
 			'BricksAsset' => array(
 				'BricksCms' => array(
 					'autoPublish' => true,					
