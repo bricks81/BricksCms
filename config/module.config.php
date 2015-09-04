@@ -1,8 +1,11 @@
 <?php
+
 	return array(
 		'controllers' => array(
 			'invokables' => array(
-				'BricksCms\Controller\IndexController' => 'BricksCms\Controller\IndexController',				
+				'BricksCms\Controller\IndexController' => 'BricksCms\Controller\IndexController',
+				'BricksAsset\Controller\AssetController' => 'BricksAsset\Controller\AssetController',
+				'BricksAsset\Controller\MenuController' => 'BricksAsset\Controller\MenuController',
 			),
 		),
 		'view_manager' => array(	
@@ -41,7 +44,47 @@
 							'action'     => 'index',
 						),
 					),					
-				),				
+				),	
+				'bricks.asset.index' => array(
+					'type' => 'segment',
+					'options' => array(
+						'route'    => '/{Admin}/{Assets}',
+						'defaults' => array(
+							'controller' => 'BricksAsset\Controller\AssetController',
+							'action'     => 'index',
+						),
+					),
+				),
+				'bricks.asset.publish' => array(
+					'type' => 'segment',
+					'options' => array(
+						'route'    => '/{Admin}/{Assets/Write}',
+						'defaults' => array(
+							'controller' => 'BricksAsset\Controller\AssetController',
+							'action'     => 'publish',
+						),
+					),
+				),
+				'bricks.asset.publish.do' => array(
+					'type' => 'segment',
+					'options' => array(
+						'route'    => '/{Admin}/{Assets/Write/Execute}',
+						'defaults' => array(
+							'controller' => 'BricksAsset\Controller\AssetController',
+							'action'     => 'publishDo',
+						),
+					),
+				),
+				'bricks.asset.publish.success' => array(
+					'type' => 'segment',
+					'options' => array(
+						'route'    => '/{Admin}/{Assets/Write/Success}',
+						'defaults' => array(
+							'controller' => 'BricksAsset\Controller\AssetController',
+							'action'     => 'publishSuccess',
+						),
+					),
+				),
 			),
 		),
 		'BricksConfig' => array(
