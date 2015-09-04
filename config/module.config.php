@@ -100,6 +100,9 @@
 				),
 			),		
 			'BricksPlugin' => array(
+				'BricksPlugin' => array(
+					'cachedir' => dirname(__DIR__ ) . '/cache',
+				),
 				'BricksCms' => array(
 					'extend' => array(
 						'Bricks\Plugin\Module' => array(
