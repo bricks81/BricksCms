@@ -98,20 +98,6 @@
 						'BricksAsset',
 					),
 				),
-			),		
-			'BricksPlugin' => array(
-				'BricksCms' => array(
-					'extend' => array(
-						'Bricks\Plugin\Module' => array(
-							'BricksCms\Plugin\Test',							
-						),						
-					),
-					'listeners' => array(
-						'Bricks\Plugin\Module::__construct.pre' => array(
-							'BricksCms\Plugin\Test::preConstruct' => -100000,
-						),						
-					),
-				),
 			),
 			'BricksAsset' => array(
 				'BricksCms' => array(
