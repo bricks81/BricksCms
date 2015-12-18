@@ -101,29 +101,21 @@
 			),
 			'BricksAsset' => array(
 				'BricksCms' => array(
-					'autoPublish' => true,					
-					'autoCompile' => true,
-					'scssSupport' => true,
 					'moduleAssetsPath' => dirname(__DIR__).'/public',
 				),
 				'jquery' => array(
-					'autoPublish' => true,
 					'moduleAssetsPath' => './vendor/components/jquery'
 				),
 				'jqueryui' => array(
-					'autoPublish' => true,
 					'moduleAssetsPath' => './vendor/components/jqueryui'
 				),
 				'bootstrap' => array(
-					'autoPublish' => true,
 					'moduleAssetsPath' => './vendor/components/bootstrap'
 				),
 				'modernizr' => array(
-					'autoPublish' => true,
 					'moduleAssetsPath' => './vendor/components/modernizr'
 				),
 				'font-awesome' => array(
-					'autoPublish' => true,
 					'moduleAssetsPath' => './vendor/components/font-awesome'
 				),
 			),
