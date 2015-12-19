@@ -88,7 +88,7 @@
 			),
 		),
 		'BricksConfig' => array(
-			'BricksCms' => array(
+			'__DEFAULT_NAMESPACE' => array(
 				'BricksCms' => array(
 					'dependendModules' => array(
 						'BricksFile',
@@ -97,25 +97,35 @@
 						'BricksPlugin',
 						'BricksAsset',
 					),
-				),
+				),				
 			),
-			'BricksAsset' => array(
-				'BricksCms' => array(
+			'BricksCms' => array(
+				'BricksAsset' => array(
 					'moduleAssetsPath' => dirname(__DIR__).'/public',
 				),
-				'jquery' => array(
-					'moduleAssetsPath' => './vendor/components/jquery'
+			),
+			'jquery' => array(
+				'BricksAsset' => array(
+					'moduleAssetsPath' => './vendor/components/jquery',
 				),
-				'jqueryui' => array(
+			),
+			'jqueryui' => array(
+				'BricksAsset' => array(
 					'moduleAssetsPath' => './vendor/components/jqueryui'
 				),
-				'bootstrap' => array(
+			),
+			'bootstrap' => array(
+				'BricksAsset' => array(
 					'moduleAssetsPath' => './vendor/components/bootstrap'
 				),
-				'modernizr' => array(
+			),
+			'modernizr' => array(
+				'BricksAsset' => array(
 					'moduleAssetsPath' => './vendor/components/modernizr'
 				),
-				'font-awesome' => array(
+			),
+			'font-awesome' => array(
+				'BricksAsset' => array(
 					'moduleAssetsPath' => './vendor/components/font-awesome'
 				),
 			),
