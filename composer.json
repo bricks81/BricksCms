@@ -18,6 +18,7 @@
         "components/jqueryui":"*",
         "components/font-awesome":"*",
         "zendframework/zend-db":"*",
+        "zendframework/zend-i18n":"*",
         "zendframework/zend-i18n-resources":"*",
         "zendframework/zend-session":"*",
         "zendframework/zend-navigation":"*",
