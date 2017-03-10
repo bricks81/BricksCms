@@ -14,11 +14,17 @@
     },
     "require": {
         "php": "^7.0",
-        "zendframework/zend-config": "*",
+        "zendframework/zend-mvc": "*",
+        "zendframework/zend-navication": "*",
+        "zendframework/zend-servicemanager": "*",
+        "zendframework/zend-modulemanager": "*",
+        "zendframework/zend-session": "*",
         "components/jquery":"*",
         "components/jqueryui":"*",
         "components/bootstrap":"*",
-        "components/font-awesome":"*"
+        "components/font-awesome":"*",
+        "bricks81/bricks-config":"*",
+        "bricks81/bricks-loader":"*"
     },
     "minimum-stability": "dev",
     "prefer-stable": false    
