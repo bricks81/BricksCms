@@ -1,0 +1,55 @@
+<?php $this->doctype(); ?>
+<html lang="<?php echo substr($this->plugin('translate')->getTranslator()->getLocale(),4); ?>">
+	<head>
+		<?php echo $this->render('head'); ?>
+	</head>
+	<body>		
+	
+		<div class="page-wrapper">
+			<?php echo $this->render('beforeMainnav'); ?>
+			<?php echo $this->render('mainnav'); ?>
+			<?php echo $this->render('breadcrumbs'); ?>
+			<?php echo $this->render('messages'); ?>
+			<content class="content-main">				
+				<?php
+					$cSubTop = (string) $this->placeholder('content-main-content-top');
+					$cSubLeft = (string) $this->placeholder('content-main-content-left');
+					$cSubRight = (string) $this->placeholder('content-main-content-right');
+					$cSubBottom = (string) $this->placeholder('content-main-content-bottom');
+					if($cSubLeft && $cSubRight){
+						$cSubClass = 'c-main-c-lr';
+					} elseif($cSubLeft){
+						$cSubClass = 'c-main-c-l';
+					} elseif($cSubRight){							
+						$cSubClass = 'c-main-c-r';
+					} else {
+						$cSubClass = 'c-main-c';
+					}
+				?>
+				<?php if($cSubTop){ ?>
+					<div class="content-main-content-top"><?php echo $cSubTop ?></div>
+				<?php } ?>
+				<?php if($cSubLeft){ ?>
+					<div class="content-main-content-left"><?php echo $cSubLeft; ?></div>
+				<?php } ?>
+				<div class="content-main-content-content <?php echo $cSubClass; ?>">
+					<?php echo $this->placeholder('beforeContent'); ?>
+					<?php echo $this->Layout()->content; ?>
+					<?php echo $this->placeholder('afterContent'); ?>
+				</div>
+				<?php if($cSubRight){ ?>
+					<div class="content-main-content-right"><?php echo $cSubRight; ?></div>
+				<?php } ?>
+				<?php if($cSubBottom){ ?>
+					<div class="content-main-content-bottom"><?php echo $cSubBottom; ?></div>
+				<?php } ?>									
+			</content>
+			<footer class="footer-main">
+				<?php echo $this->placeholder('footer'); ?>
+			</footer>
+		</div>
+
+        <?php echo $this->InlineScript(); ?>
+
+	</body>	
+</html>

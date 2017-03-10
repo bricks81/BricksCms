@@ -1,134 +1,129 @@
 <?php
 
-	return array(
-		'controllers' => array(
-			'invokables' => array(
-				'BricksCms\Controller\IndexController' => 'BricksCms\Controller\IndexController',
-				'BricksAsset\Controller\AssetController' => 'BricksAsset\Controller\AssetController',
-				'BricksAsset\Controller\MenuController' => 'BricksAsset\Controller\MenuController',
-			),
-		),
-		'view_manager' => array(	
-			'template_map' => array(
-				'layout/layout'			=> __DIR__.'/../view/layout/layout.phtml',
-				'error/404'				=> __DIR__.'/../view/error/404.phtml',
-				'error/index'			=> __DIR__.'/../view/error/index.phtml',
-			),
-			'template_path_stack' => array(
-				__DIR__ . '/../view',
-			),
-		),
-		'translator' => array(
-			'translation_file_patterns' => array(
-				array(
-					'type' => 'phparray',
-					'base_dir' => __DIR__.'/../language',
-					'pattern' => '%1$s/%1$s.php',
-				),
-				array(
-					'type' => 'gettext',
-					'base_dir' => __DIR__.'/../language',
-					'pattern' => '%1$s.mo',
-				)
-			),
-		),
-		'router' => array(
-			'router_class' => 'Zend\Mvc\Router\Http\TranslatorAwareTreeRouteStack',
-			'routes' => array(
-				'bricks.index.index' => array(
-					'type' => 'segment',
-					'options' => array(						
-						'route'    => '/{Bricks}',
-						'defaults' => array(
-							'controller' => 'BricksCms\Controller\IndexController',
-							'action'     => 'index',
-						),
-					),					
-				),	
-				'bricks.asset.index' => array(
-					'type' => 'segment',
-					'options' => array(
-						'route'    => '/{Admin}/{Assets}',
-						'defaults' => array(
-							'controller' => 'BricksAsset\Controller\AssetController',
-							'action'     => 'index',
-						),
-					),
-				),
-				'bricks.asset.publish' => array(
-					'type' => 'segment',
-					'options' => array(
-						'route'    => '/{Admin}/{Assets/Write}',
-						'defaults' => array(
-							'controller' => 'BricksAsset\Controller\AssetController',
-							'action'     => 'publish',
-						),
-					),
-				),
-				'bricks.asset.publish.do' => array(
-					'type' => 'segment',
-					'options' => array(
-						'route'    => '/{Admin}/{Assets/Write/Execute}',
-						'defaults' => array(
-							'controller' => 'BricksAsset\Controller\AssetController',
-							'action'     => 'publishDo',
-						),
-					),
-				),
-				'bricks.asset.publish.success' => array(
-					'type' => 'segment',
-					'options' => array(
-						'route'    => '/{Admin}/{Assets/Write/Success}',
-						'defaults' => array(
-							'controller' => 'BricksAsset\Controller\AssetController',
-							'action'     => 'publishSuccess',
-						),
-					),
-				),
-			),
-		),
-		'BricksConfig' => array(
-			'__DEFAULT_NAMESPACE' => array(
-				'BricksCms' => array(
-					'dependendModules' => array(
-						'BricksFile',
-						'BricksConfig',
-						'BricksClassLoader',
-						'BricksPlugin',
-						'BricksAsset',
-					),
-				),				
-			),
-			'BricksCms' => array(
-				'BricksAsset' => array(
-					'moduleAssetsPath' => dirname(__DIR__).'/public',
-				),
-			),
-			'jquery' => array(
-				'BricksAsset' => array(
-					'moduleAssetsPath' => './vendor/components/jquery',
-				),
-			),
-			'jqueryui' => array(
-				'BricksAsset' => array(
-					'moduleAssetsPath' => './vendor/components/jqueryui'
-				),
-			),
-			'bootstrap' => array(
-				'BricksAsset' => array(
-					'moduleAssetsPath' => './vendor/components/bootstrap'
-				),
-			),
-			'modernizr' => array(
-				'BricksAsset' => array(
-					'moduleAssetsPath' => './vendor/components/modernizr'
-				),
-			),
-			'font-awesome' => array(
-				'BricksAsset' => array(
-					'moduleAssetsPath' => './vendor/components/font-awesome'
-				),
-			),
-		),		
-	);
-?>
+/**
+ * Bricks Framework & Bricks CMS
+ * http://bricks-cms.org
+ *
+ * The MIT License (MIT)
+ * Copyright (c) 2015 bricks-cms.org
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
+use Zend\ServiceManager\Factory\InvokableFactory;
+use Bricks\Cms\Controller;
+use Zend\Router\Http\Segment;
+use Bricks\Cms\Navigation\BackendNavigationFactory;
+use Zend\Router\Http\TranslatorAwareTreeRouteStack;
+use Bricks\Cms\Zend\ModuleManager\ModuleManagerInitializer;
+use Bricks\Navigation\Page;
+
+return [
+    'router' => [
+        'router_class' => TranslatorAwareTreeRouteStack::class,
+        'routes' => [
+            'backend' => [
+                'type' => Segment::class,
+                'may_terminate' => true,
+                'options' => [
+                    'route'    => '/{backend}',
+                    'defaults' => [
+                        'controller' => Controller\IndexController::class,
+                        'action'     => 'index',
+                    ],
+                ],
+                'child_routes' => [
+                    'system' => [
+                        'type' => Segment::class,
+                        'may_terminate' => true,
+                        'options' => [
+                            'route' => '/{system}',
+                            'defaults' => [
+                                'controller' => Controller\IndexController::class,
+                                'action' => 'index'
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ],
+    'translator' => [
+        'locale' => 'de_DE',
+        'translation_file_patterns' => [
+            [
+                'type' => 'phparray',
+                'base_dir' => __DIR__.'/../lang',
+                'pattern' => '%s/routes.php',
+                'text_domain' => 'routes'
+            ],
+            [
+                'type' => 'phparray',
+                'base_dir' => __DIR__.'/../lang',
+                'pattern' => '%s/lang.php',
+            ]
+        ]
+    ],
+    'controllers' => [
+        'factories' => [
+            Controller\IndexController::class => InvokableFactory::class,
+        ]
+    ],
+    'view_manager' => [
+        'template_map' => [
+            'layout/backend'  => __DIR__ . '/../view/layout/backend.phtml',
+            'bricks-cms/index/index'     => __DIR__ . '/../view/index/index.phtml',
+        ],
+        'template_path_stack' => [
+            __DIR__ . '/../view',
+        ],
+    ],
+    'service_manager' => [
+        'allow_override' => true,
+        'factories' => [
+            'backend-navigation' => BackendNavigationFactory::class
+        ],
+    ],
+    'navigation' => [
+        'backend-navigation' => [
+            'backend' => [
+                'type' => Page\Mvc::class,
+                'label' => 'Backend',
+                'route' => 'backend',
+                'controller' => Controller\IndexController::class,
+                'action' => 'index',
+                'pages' => [
+                    'backend' => [
+                        'type' => Page\Mvc::class,
+                        'label' => 'Overview',
+                        'route' => 'backend',
+                        'controller' => Controller\IndexController::class,
+                        'action' => 'index',
+                    ],
+                    'backend/system' => [
+                        'type' => Page\Mvc::class,
+                        'label' => 'System',
+                        'route' => 'backend/system',
+                        'controller' => Controller\IndexController::class,
+                        'action' => 'index',
+                    ]
+                ]
+            ]
+        ]
+    ]
+];

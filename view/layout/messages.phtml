@@ -1,0 +1,17 @@
+<?php 
+	$session = new \Zend\Session\Container('messages');
+	$types = array('errors','warnings','success');	
+?>
+<?php foreach($types AS $type){ ?>
+	<?php $messages = $session->$type; ?>
+	<?php if(is_array($messages) && count($messages)){ ?>
+		<div class="message message-<?php echo $type; ?>">
+			<ul>
+				<?php foreach($messages AS $message) { ?>
+					<?php echo $this->escape($message); ?>
+				<?php } ?>
+				<?php unset($session->$type); ?>
+			</ul>
+		</div>
+	<?php } ?>	
+<?php } ?>

@@ -1,28 +1,25 @@
 {
     "name": "bricks81/bricks-cms",
-    "description": "CMS Implementation based on Bricks CMS Framework",
+    "description": "Bricks CMS Framework - CMS Implementation",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Sven Ullmann",
-            "email": "kontakt@28-n-half.de"
-        }
+    "keywords": [
+        "bricks",
+        "cms"
     ],
-    "minimum-stability": "dev",
-    "require": {
-    	"php": ">=5.3.3",
-    	"bricks81/bricks-asset": "dev-master",
-    	"bricks81/bricks-config": "dev-master",
-    	"bricks81/bricks-class-loader": "dev-master",
-    	"bricks81/bricks-file": "dev-master",
-    	"bricks81/bricks-plugin": "dev-master",
-    	"components/bootstrap": "3.*@stable", 
-    	"components/jquery": "2.*@stable",
-    	"components/jqueryui": "1.*@stable", 
-    	"components/modernizr": "2.*@stable",
-    	"components/font-awesome": "4.*@stable"
-    },
+    "homepage": "https://www.bricks-cms.org",
     "autoload": {
-    	"classmap": ["Module.php"]
-    }    
+        "psr-4": {
+            "Bricks\\Cms\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.0",
+        "zendframework/zend-config": "*",
+        "components/jquery":"*",
+        "components/jqueryui":"*",
+        "components/bootstrap":"*",
+        "components/font-awesome":"*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false    
 }

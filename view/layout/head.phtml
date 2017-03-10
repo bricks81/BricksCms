@@ -1,0 +1,18 @@
+<?php echo $this->HeadTitle('Bricks CMS'); ?>
+<?php echo $this->HeadMeta(); ?>
+<?php
+    echo $this->HeadLink()
+        ->appendStylesheet($this->basePath('assets/font-awesome/css/font-awesome.css'))
+        ->appendStylesheet($this->basePath('assets/bricks-cms/css/normalize.css'))
+        ->appendStylesheet($this->basePath('assets/bricks-cms/fonts/lato/stylesheet.css'))
+        ->appendStylesheet($this->basePath('assets/bricks-cms/css/backend.css'))
+        ->appendStylesheet($this->basePath('assets/bricks-cms/css/backend-responsive.css'));
+?>
+<?php echo $this->HeadStyle(); ?>
+<?php
+    echo $this->HeadScript()
+        ->appendFile($this->basePath('assets/jquery/jquery.js'))
+        ->appendScript('jQuery.noConflict();')
+        ->appendFile($this->basePath('assets/jqueryui/jquery-ui.js'))
+        ->appendFile($this->basePath('assets/bricks-cms/js/backend.js'));
+?>
