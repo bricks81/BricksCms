@@ -19,6 +19,7 @@
         "components/font-awesome":"*",
         "zendframework/zend-db":"*",
         "zendframework/zend-i18n-resources":"*",
+        "zendframework/zend-session":"*",
         "bricks81/bricks-exception":"dev-master",
         "bricks81/bricks-file":"dev-master",
         "bricks81/bricks-config":"dev-master",
