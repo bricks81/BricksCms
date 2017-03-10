@@ -17,6 +17,7 @@
         "components/jquery":"*",
         "components/jqueryui":"*",
         "components/font-awesome":"*",
+        "zendframework/zend-i18n-resources":"*",
         "bricks81/bricks-exception":"dev-master",
         "bricks81/bricks-file":"dev-master",
         "bricks81/bricks-config":"dev-master",
