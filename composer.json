@@ -22,8 +22,21 @@
         "components/jquery":"*",
         "components/jqueryui":"*",
         "components/font-awesome":"*",
+        "bricks81/bricks-exception":"*",
+        "bricks81/bricks-file":"*",
         "bricks81/bricks-config":"*",
-        "bricks81/bricks-loader":"*"
+        "bricks81/bricks-loader":"*",
+        "bricks81/bricks-translate":"*",
+        "bricks81/bricks-download":"*",
+        "bricks81/bricks-upload":"*",
+        "bricks81/bricks-module":"*",
+        "bricks81/bricks-model":"*",
+        "bricks81/bricks-navigation":"*",
+        "bricks81/bricks-acl":"*",
+        "bricks81/bricks-asset":"*",
+        "bricks81/bricks-backup":"*",
+        "bricks81/bricks-update":"*",
+        "bricks81/bricks-user":"*"
     },
     "minimum-stability": "dev",
     "prefer-stable": false    
