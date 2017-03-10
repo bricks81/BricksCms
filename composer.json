@@ -21,7 +21,6 @@
         "zendframework/zend-session": "*",
         "components/jquery":"*",
         "components/jqueryui":"*",
-        "components/bootstrap":"*",
         "components/font-awesome":"*",
         "bricks81/bricks-config":"*",
         "bricks81/bricks-loader":"*"
