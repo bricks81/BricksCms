@@ -1,6 +1,3 @@
-# BricksCms
-Implementation of an CMS using the Bricks CMS Framework
+Since the Zend Framework has become obsolete, this code is too.
 
-Currently the Asset Managment is disabled. See for public files on http://bricks-cms.org
-
-Install instructrions on http://bricks-cms.org
+More see: https://www.bricks-cms.org
